@@ -14,11 +14,8 @@ class MyApp(ShowBase):
         self.ship.setPos(0, 200, 0)
         self.ship.setHpr(180, 90, 0)
 
-        self.Universe = self.loader.loadModel("./Assets/Universe/Universe.x")
-        self.Universe.reparentTo(self.render)
-        self.Universe.setScale(15000)
-        tex_UNI = self.loader.loadTexture("./Assets/Universe/Universe.jpg")
-        self.Universe.setTexture(tex_UNI, 1)
+        self.Universe = spaceJamClasses.Universe(self.loader, "./Assets/Universe/Universe.x", self.render,
+            "Universe", "./Assets/Universe/Universe.jpg", (0, 0, 0), 15000)
 
         self.Planet1 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render,
             "Planet1", "./Assets/Planets/Planet1.jpg", (-1500, 5000, 350), 100)
