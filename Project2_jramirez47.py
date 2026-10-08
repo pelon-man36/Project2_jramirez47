@@ -5,14 +5,8 @@ import DefensePaths as defensePaths
 class MyApp(ShowBase):
     def __init__(self):
         ShowBase.__init__(self)
-
-        self.ship = self.loader.loadModel("./Assets/Spaceships/ship.obj")
-        self.ship.reparentTo(self.render)
-        self.ship.setScale(5)
-        tex_ship = self.loader.loadTexture("./Assets/Spaceships/ship_TEX.tga")
-        self.ship.setTexture(tex_ship, 1)
-        self.ship.setPos(0, 200, 0)
-        self.ship.setHpr(180, 90, 0)
+        self.Universe = spaceJamClasses.Ship(self.loader, "./Assets/Spaceships/ship.obj", self.render,
+            "Ship", "./Assets/Spaceships/ship_TEX.tga", (0, 200, 0), (180, 90, 0), 5)
 
         self.Universe = spaceJamClasses.Universe(self.loader, "./Assets/Universe/Universe.x", self.render,
             "Universe", "./Assets/Universe/Universe.jpg", (0, 0, 0), 15000)
