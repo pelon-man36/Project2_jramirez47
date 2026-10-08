@@ -38,20 +38,22 @@ class MyApp(ShowBase):
             spaceJamClasses.Drone.droneCount += 1
             nickName = "Drone" + str(spaceJamClasses.Drone.droneCount)
 
-            # self.DrawCloudDefense(self.Planet1, nickName)
-            # self.DrawBaseballSeams(self.Station, nickName, j, fullCycle, 2)
+            self.DrawCloudDefense(self.Planet1, nickName)
+            self.DrawBaseballSeams(self.Station, nickName, j, fullCycle, 2)
 
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)
         unitVec.normalize()
         position = unitVec * radius * 250 + centralObject.modelNode.getPos()
-        spaceJamClasses.Drone(self.loader, "", self.render, droneName, "", position, 5)
+        spaceJamClasses.Drone(self.loader, "./Assets/Spaceships/DroneDefender/DroneDefender.obj",
+            self.render, droneName, "./Assets/Spaceships/DroneDefender/octotoad1_auv.png", position, 5)
 
     def DrawCloudDefense(self, centralObject, droneName):
         unitVec = defensePaths.Cloud()
         unitVec.normalize()
         position = unitVec * 500 + centralObject.modelNode.getPos()
-        spaceJamClasses.Drone(self.loader, "", self.render, droneName, "", position, 10)
+        spaceJamClasses.Drone(self.loader, "./Assets/Spaceships/DroneDefender/DroneDefender.obj",
+            self.render, droneName, "./Assets/Spaceships/DroneDefender/octotoad1_auv.png", position, 10)
 
 
 
