@@ -29,10 +29,8 @@ class MyApp(ShowBase):
         self.Planet6 = spaceJamClasses.Planet(self.loader, "./Assets/Planets/protoPlanet.x", self.render,
             "Planet6", "./Assets/Planets/Planet6.png", (2000, 6000, 0), 100)
 
-        self.Station = self.loader.loadModel("./Assets/Space_Station/SpaceStation1B/spaceStation.egg")
-        self.Station.reparentTo(self.render)
-        self.Station.setScale(50)
-        self.Station.setPos(5000, 4000, 70)
+        self.Station = spaceJamClasses.SpaceStation(self.loader, "./Assets/Space_Station/SpaceStation1B/spaceStation.egg",
+            self.render, "SpaceStation", (5000, 4000, 70), 50)
 
         fullCycle = 60
 
