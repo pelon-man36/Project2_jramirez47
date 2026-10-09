@@ -31,11 +31,21 @@ def BaseballSeams(step, numSeams, B, F = 1):
 def createCircle1(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
     self.parent = self.loader.loadModel(objectModel)
     x = 0
-
     for i in range(25):
         theta = x
         self.placeholder2 = self.render.attachNewNode("PlaceHolder") # Attaching a new node to the render scene graph.
         self.placeholder2.setPos(200.0 * math.cos(theta), 200.0 * math.sin(theta), 0.0 * math.tan(theta))
         self.placeholder2.setColor(1, 0, 0, 1)
+        self.parent.instanceTo(self.placeholder2)
+        x = x + 0.5
+
+def createCircle2(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
+    self.parent = self.loader.loadModel(objectModel)
+    x = 0
+    for i in range(25):
+        theta = x
+        self.placeholder2 = self.render.attachNewNode("PlaceHolder") # Attaching a new node to the render scene graph.
+        self.placeholder2.setPos(200.0 * math.sin(theta), 0.0 * math.tan(theta), 200.0 * math.cos(theta))
+        self.placeholder2.setColor(0, 1, 0, 1)
         self.parent.instanceTo(self.placeholder2)
         x = x + 0.5
