@@ -43,6 +43,7 @@ class MyApp(ShowBase):
 
         self.circle1 = defensePaths.createCircle1(self)
         self.circle2 = defensePaths.createCircle2(self)
+        self.circle3 = defensePaths.createCircle3(self)
 
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)

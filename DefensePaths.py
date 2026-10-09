@@ -49,3 +49,14 @@ def createCircle2(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefe
         self.placeholder2.setColor(0, 1, 0, 1)
         self.parent.instanceTo(self.placeholder2)
         x = x + 0.5
+
+def createCircle3(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
+    self.parent = self.loader.loadModel(objectModel)
+    x = 0
+    for i in range(25):
+        theta = x
+        self.placeholder2 = self.render.attachNewNode("PlaceHolder") # Attaching a new node to the render scene graph.
+        self.placeholder2.setPos(0.0 * math.cos(theta), 200.0 * math.sin(theta), 200.0 * math.cos(theta))
+        self.placeholder2.setColor(0, 0, 1, 1)
+        self.parent.instanceTo(self.placeholder2)
+        x = x + 0.5
