@@ -27,3 +27,18 @@ def BaseballSeams(step, numSeams, B, F = 1):
     z = R * zzz / rrr
 
     return Vec3(x, y, z)
+
+def createCircle(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
+    self.parent = self.loader.loadModel(objectModel)
+    x = 0
+
+    for i in range(100):
+        theta = x
+        self.placeholder2 = self.render.attachNewNode("PlaceHolder") # Attaching a new node to the render scene graph.
+        self.placeholder2.setPos(50.0 * math.cos(theta), 50.0 * math.sin(theta), 0.0 * math.tan(theta))
+        red = 0.6 + random.random() * 0.4
+        green = 0.6 + random.random() * 0.4
+        blue = 0.6 + random.random() * 0.4
+        self.placeholder2.setColorScale(red, green, blue, 1.0)
+        self.parent.instanceTo(self.placeholder2)
+        x = x + 0.06

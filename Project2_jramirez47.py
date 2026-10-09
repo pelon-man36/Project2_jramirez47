@@ -41,6 +41,8 @@ class MyApp(ShowBase):
             self.DrawCloudDefense(self.Planet1, nickName)
             self.DrawBaseballSeams(self.Station, nickName, j, fullCycle, 2)
 
+        self.circle1 = defensePaths.createCircle(self)
+
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)
         unitVec.normalize()
