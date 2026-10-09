@@ -41,9 +41,9 @@ class MyApp(ShowBase):
             self.DrawCloudDefense(self.Planet1, nickName)
             self.DrawBaseballSeams(self.Station, nickName, j, fullCycle, 2)
 
-        self.circle1 = defensePaths.createCircle1(self)
-        self.circle2 = defensePaths.createCircle2(self)
-        self.circle3 = defensePaths.createCircle3(self)
+        self.circleX = defensePaths.createCircleX(self)
+        self.circleZ = defensePaths.createCircleZ(self)
+        self.circleY = defensePaths.createCircleY(self)
 
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)

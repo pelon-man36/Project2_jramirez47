@@ -28,7 +28,7 @@ def BaseballSeams(step, numSeams, B, F = 1):
 
     return Vec3(x, y, z)
 
-def createCircle1(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
+def createCircleX(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
     self.parent = self.loader.loadModel(objectModel)
     x = 0
     for i in range(25):
@@ -39,7 +39,7 @@ def createCircle1(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefe
         self.parent.instanceTo(self.placeholder2)
         x = x + 0.5
 
-def createCircle2(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
+def createCircleZ(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
     self.parent = self.loader.loadModel(objectModel)
     x = 0
     for i in range(25):
@@ -50,7 +50,7 @@ def createCircle2(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefe
         self.parent.instanceTo(self.placeholder2)
         x = x + 0.5
 
-def createCircle3(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
+def createCircleY(self, objectModel="./Assets/Spaceships/DroneDefender/DroneDefender.obj"):
     self.parent = self.loader.loadModel(objectModel)
     x = 0
     for i in range(25):
