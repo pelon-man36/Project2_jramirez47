@@ -5,8 +5,8 @@ import DefensePaths as defensePaths
 class MyApp(ShowBase):
     def __init__(self):
         ShowBase.__init__(self)
-        self.Universe = spaceJamClasses.Ship(self.loader, "./Assets/Spaceships/ship.obj", self.render,
-            "Ship", "./Assets/Spaceships/ship_TEX.tga", (0, 400, 0), (180, 90, 0), 5)
+        self.Player = spaceJamClasses.Player(self.loader, "./Assets/Spaceships/ship.obj", self.render,
+            "Player", "./Assets/Spaceships/ship_TEX.tga", (0, 400, 0), (180, 90, 0), 5)
 
         self.Universe = spaceJamClasses.Universe(self.loader, "./Assets/Universe/Universe.x", self.render,
             "Universe", "./Assets/Universe/Universe.jpg", (0, 0, 0), 15000)

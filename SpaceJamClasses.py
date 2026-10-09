@@ -25,7 +25,7 @@ class Universe(ShowBase):
         tex = loader.loadTexture(texPath)
         self.modelNode.setTexture(tex, 1)
 
-class Ship(ShowBase):
+class Player(ShowBase):
     def __init__(self, loader: Loader, modelPath: str, parentNode: NodePath, nodeName: str,
         texPath: str, posVec: Vec3, posHpr: Vec3, scaleVec: float):
         self.modelNode = loader.loadModel(modelPath)
