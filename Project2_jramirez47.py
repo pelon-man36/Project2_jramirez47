@@ -6,7 +6,7 @@ class MyApp(ShowBase):
     def __init__(self):
         ShowBase.__init__(self)
         self.Universe = spaceJamClasses.Ship(self.loader, "./Assets/Spaceships/ship.obj", self.render,
-            "Ship", "./Assets/Spaceships/ship_TEX.tga", (0, 200, 0), (180, 90, 0), 5)
+            "Ship", "./Assets/Spaceships/ship_TEX.tga", (0, 400, 0), (180, 90, 0), 5)
 
         self.Universe = spaceJamClasses.Universe(self.loader, "./Assets/Universe/Universe.x", self.render,
             "Universe", "./Assets/Universe/Universe.jpg", (0, 0, 0), 15000)
@@ -41,7 +41,7 @@ class MyApp(ShowBase):
             self.DrawCloudDefense(self.Planet1, nickName)
             self.DrawBaseballSeams(self.Station, nickName, j, fullCycle, 2)
 
-        self.circle1 = defensePaths.createCircle(self)
+        self.circle1 = defensePaths.createCircle1(self)
 
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
         unitVec = defensePaths.BaseballSeams(step, numSeams, B = 0.4)
